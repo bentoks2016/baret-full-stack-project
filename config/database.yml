@@ -1,4 +1,4 @@
-<% project_name = 'BaretFullStackProject' %>
+<% project_name = 'baret-full-stack-project' %>
 
 default: &default
   adapter: postgresql

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/doctors/${id}" \
+curl "https://rocky-castle-66213.herokuapp.com/doctors/${id}" \
   --include \
   --request DELETE
 

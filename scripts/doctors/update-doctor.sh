@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/residents/${id}" \
+curl "https://rocky-castle-66213.herokuapp.com/doctors/${id}" \
   --include \
   --request PATCH \
   --header "Content-Type: application/json" \
