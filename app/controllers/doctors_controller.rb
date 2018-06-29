@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class DoctorsController < ApplicationController
+class DoctorsController < ProtectedController
   before_action :set_doctor, only: %i[show update destroy]
 
   # GET /doctors
@@ -17,7 +17,7 @@ class DoctorsController < ApplicationController
 
   # POST /doctors
   def create
-    @doctor = Doctor.new(doctor_params)
+    @doctor = current_user.doctors.build(doctor_params)
 
     if @doctor.save
       render json: @doctor, status: :created
@@ -38,13 +38,15 @@ class DoctorsController < ApplicationController
   # DELETE /doctors/1
   def destroy
     @doctor.destroy
+
+    head :no_content
   end
 
   private
 
   # Use callbacks to share common setup or constraints between actions.
   def set_doctor
-    @doctor = Doctor.find(params[:id])
+    @doctor = current_user.doctors.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

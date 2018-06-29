@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   # RESTful routes
   resources :examples, except: %i[new edit]
-  resources :users, only: %i[index show update]
+  resources :users, only: %i[index show update create destroy]
   resources :residents, only: %i[index show create destroy update]
   resources :doctors, only: %i[index show create destroy update]
   # Custom routes
