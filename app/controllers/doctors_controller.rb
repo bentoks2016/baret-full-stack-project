@@ -51,6 +51,8 @@ class DoctorsController < ProtectedController
 
   # Only allow a trusted parameter "white list" through.
   def doctor_params
-    params.require(:doctor).permit(:first_name, :last_name, :specialization)
+    params.require(:doctor).permit(
+      :user_id, :first_name, :last_name, :specialization
+    )
   end
 end
