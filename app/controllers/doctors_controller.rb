@@ -5,7 +5,7 @@ class DoctorsController < ProtectedController
 
   # GET /doctors
   def index
-    @doctors = Doctor.all
+    @doctors = current_user.doctors
 
     render json: @doctors
   end
