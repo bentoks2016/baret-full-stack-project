@@ -12,6 +12,9 @@ application where users can sign up and register
 https://github.com/bentoks2016/baret-full-stack-project is the link to github
 repo this application`s backend API.
 
+https://rocky-castle-66213.herokuapp.com/ is the link to the deployed api on
+heroku. 
+
 My planning involed breaking the problem down into very managebale components &
 working my way to to the major problems. It involved critically looking at the
 overall major objectives and the very minor components parts that make up the
